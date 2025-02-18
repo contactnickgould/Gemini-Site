@@ -1,0 +1,61 @@
+/* style.css */
+body {
+    font-family: sans-serif; /* Example font */
+    margin: 0;
+    background-color: #111; /* Example dark background */
+    color: #eee; /* Example light text */
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    /* CSS for a spinner animation */
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#hero {
+    position: relative; /* For video positioning */
+    overflow: hidden; /* Hide video overflow */
+}
+
+#hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire hero section */
+}
+
+#hero h1, #hero button {
+    position: relative; /* Bring text/button in front of video */
+    z-index: 1; /* Ensure they're on top */
+    /* Add styling for text and button */
+}
+
+/* Add more CSS for other sections */
+
+/* Responsive design using media queries */
+@media (max-width: 768px) {
+    /* Styles for tablets and smaller screens */
+}
